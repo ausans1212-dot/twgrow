@@ -4,8 +4,8 @@ import { Heart, CreditCard, Landmark } from 'lucide-react';
 
 export default function Donate() {
   return (
-    <section id="donate" className="py-24 bg-white scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="donate" className="py-24 md:py-16 bg-white min-h-[calc(100vh-5rem)] flex items-center justify-center scroll-mt-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl overflow-hidden bg-orange-600 text-white">
           <div className="absolute inset-0">
             <img

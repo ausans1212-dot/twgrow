@@ -49,7 +49,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><a href="#about" className="hover:text-orange-400 transition-colors">關於本協會</a></li>
               <li><a href="#activities" className="hover:text-orange-400 transition-colors">活動紀錄</a></li>
-              <li><a href="#donate-info" className="hover:text-orange-400 transition-colors">支持我們</a></li>
+              <li><a href="#donate" className="hover:text-orange-400 transition-colors">支持我們</a></li>
             </ul>
           </div>
 

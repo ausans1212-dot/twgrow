@@ -27,7 +27,7 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#donate-info"
+                href="#donate"
                 className="inline-flex justify-center items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-orange-600 hover:shadow-lg hover:-translate-y-0.5 transition-all w-full sm:w-auto"
               >
                 加入資助行列

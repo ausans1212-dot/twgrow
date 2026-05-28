@@ -44,7 +44,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#donate-info"
+              href="#donate"
               className="bg-orange-500 text-white px-6 py-2.5 rounded-full font-medium hover:bg-orange-600 hover:shadow-md transition-all active:scale-95"
             >
               我要捐款
@@ -82,7 +82,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#donate-info"
+                href="#donate"
                 onClick={() => setIsOpen(false)}
                 className="block w-full text-center mt-4 bg-orange-500 text-white px-6 py-3 rounded-full font-medium hover:bg-orange-600 transition-colors"
               >
