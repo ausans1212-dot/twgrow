@@ -1,0 +1,6 @@
+{
+  "name": "社團法人中華陪伴兒童成長的關懷協會",
+  "description": "社團法人中華陪伴兒童成長的關懷協會官方網站。提供協會介紹、志工服務集錦與線上捐款資訊。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
