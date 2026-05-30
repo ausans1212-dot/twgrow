@@ -25,17 +25,10 @@ export default function Hero() {
             <p className="text-lg md:text-xl text-neutral-600 mb-10 leading-relaxed max-w-lg">
               我們堅信，每位孩子都應獲得溫暖的陪伴、悉心的聆聽與尊重。唯有了解他們獨特的特質，才能輕柔地引導他們，以自己的步伐與方向安心成長，最終發掘並發揮他們的無限潛能。
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#donate"
-                className="inline-flex justify-center items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-orange-600 hover:shadow-lg hover:-translate-y-0.5 transition-all w-full sm:w-auto"
-              >
-                加入資助行列
-                <ArrowRight className="w-5 h-5" />
-              </a>
+            <div className="flex flex-col flex-wrap sm:flex-row gap-4">
               <a
                 href="#about"
-                className="inline-flex justify-center items-center gap-2 bg-white text-neutral-700 border border-neutral-200 px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-50 hover:border-neutral-300 transition-all w-full sm:w-auto"
+                className="inline-flex justify-center flex-1 sm:flex-none items-center gap-2 bg-white text-neutral-700 border border-neutral-200 px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-50 hover:border-neutral-300 transition-all w-full sm:w-auto"
               >
                 了解我們的故事
               </a>

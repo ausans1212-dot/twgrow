@@ -13,7 +13,7 @@ function IntroAnimation({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       onComplete();
-    }, 6000); // 1.5s logo + 1.2s text + 3.3s pause
+    }, 3700); // 1.5s logo + 1.2s text + 1s pause
     return () => clearTimeout(timer);
   }, [onComplete]);
 

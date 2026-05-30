@@ -47,7 +47,7 @@ export default function Navbar() {
               href="#donate"
               className="bg-orange-500 text-white px-6 py-2.5 rounded-full font-medium hover:bg-orange-600 hover:shadow-md transition-all active:scale-95"
             >
-              我要捐款
+              加入資助行列
             </a>
           </div>
 
@@ -86,7 +86,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="block w-full text-center mt-4 bg-orange-500 text-white px-6 py-3 rounded-full font-medium hover:bg-orange-600 transition-colors"
               >
-                我要捐款
+                加入資助行列
               </a>
             </div>
           </motion.div>
