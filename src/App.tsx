@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Activities from './components/Activities';
+import Media from './components/Media';
 import Volunteer from './components/Volunteer';
 import Donate from './components/Donate';
 import Footer from './components/Footer';
@@ -80,6 +81,7 @@ export default function App() {
           <About />
           <Services />
           <Activities />
+          <Media />
           <Volunteer />
           <Donate />
         </main>

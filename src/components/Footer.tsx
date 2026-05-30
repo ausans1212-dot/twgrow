@@ -56,7 +56,8 @@ export default function Footer() {
             <h3 className="text-white font-bold text-lg mb-6">快速連結</h3>
             <ul className="space-y-4">
               <li><a href="#about" className="hover:text-orange-400 transition-colors">關於本協會</a></li>
-              <li><a href="#activities" className="hover:text-orange-400 transition-colors">活動紀錄</a></li>
+              <li><a href="#activities" className="hover:text-orange-400 transition-colors">陪童日常</a></li>
+              <li><a href="#volunteer" className="hover:text-orange-400 transition-colors">志工招募</a></li>
               <li><a href="#donate" className="hover:text-orange-400 transition-colors">支持我們</a></li>
             </ul>
           </div>

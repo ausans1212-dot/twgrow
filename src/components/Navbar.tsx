@@ -8,7 +8,8 @@ export default function Navbar() {
   const links = [
     { name: '關於我們', href: '#about' },
     { name: '服務項目', href: '#services' },
-    { name: '活動紀錄', href: '#activities' },
+    { name: '陪童日常', href: '#activities' },
+    { name: '大小心聲', href: '#media' },
     { name: '志工招募', href: '#volunteer' },
   ];
 

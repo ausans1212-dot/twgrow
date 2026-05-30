@@ -82,7 +82,7 @@ export default function Activities() {
         
         <div className="text-center max-w-3xl mx-auto mb-16 px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            陪童的日常紀錄
+            陪童日常
           </h2>
           <p className="text-lg text-neutral-600">
             每一張照片背後，都是一段生命影響生命的過程。
