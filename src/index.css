@@ -4,3 +4,12 @@
 @theme {
   --font-sans: "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Prevent image saving across devices */
+img {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  user-select: none; /* Standard */
+  -webkit-user-drag: none; /* Safari, Chrome */
+  pointer-events: none; /* Prevents right click/long press context menu */
+}
