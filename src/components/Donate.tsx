@@ -43,14 +43,14 @@ export default function Donate() {
               
               <div className="space-y-4">
                 {/* Option 2 */}
-                <div className="p-4 border-2 border-orange-100 rounded-xl hover:border-orange-500 transition-colors cursor-pointer group flex items-center gap-4">
-                  <div className="bg-orange-100 p-3 rounded-full group-hover:bg-orange-500 group-hover:text-white transition-colors text-orange-500">
-                    <CreditCard className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg">線上捐款</h4>
-                  </div>
-                </div>
+                <a 
+                  href="#"
+                  className="w-full flex justify-center items-center gap-3 bg-orange-500 text-white px-8 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-orange-600 transition-all active:scale-95"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <CreditCard className="w-6 h-6 md:w-7 md:h-7" />
+                  <span>線上捐款</span>
+                </a>
 
                  {/* Option 3 */}
                 <div id="donate-info" className="p-4 border-2 border-neutral-100 rounded-xl bg-neutral-50 scroll-mt-28">

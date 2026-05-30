@@ -64,12 +64,12 @@ export default function Services() {
             >
               {/* Background Image that fades in on hover */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-60 transform scale-105 group-hover:scale-100 transition-all duration-700 ease-out z-0"
+                className="absolute inset-0 bg-cover bg-center opacity-40 md:opacity-0 group-hover:opacity-60 transform scale-100 md:scale-105 group-hover:scale-100 transition-all duration-700 ease-out z-0"
                 style={{ backgroundImage: `url(${service.image})` }}
               />
               
               {/* Overlay gradient to keep text readable */}
-              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent group-hover:via-white/80 z-0 transition-colors duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent md:from-white md:via-white/90 group-hover:via-white/80 z-0 transition-colors duration-500"></div>
 
               {/* Card Content with translate right on hover */}
               <div className="relative p-8 z-10 transform group-hover:translate-x-2 transition-transform duration-500 ease-out flex-1 flex flex-col">

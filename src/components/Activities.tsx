@@ -99,8 +99,8 @@ export default function Activities() {
               viewport={{ once: true }}
               className="order-2 lg:order-1"
             >
-              <div className="inline-flex items-center gap-2 text-rose-500 font-semibold tracking-wider uppercase text-sm mb-4">
-                <Sparkles className="w-5 h-5" />
+              <div className="inline-flex items-center gap-2 text-rose-500 font-bold tracking-wider uppercase text-base sm:text-lg mb-4">
+                <Sparkles className="w-6 h-6 sm:w-7 sm:h-7" />
                 <span>多元體驗課程</span>
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-4">
@@ -140,8 +140,8 @@ export default function Activities() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 text-blue-500 font-semibold tracking-wider uppercase text-sm mb-4">
-                <Users className="w-5 h-5" />
+              <div className="inline-flex items-center gap-2 text-blue-500 font-bold tracking-wider uppercase text-base sm:text-lg mb-4">
+                <Users className="w-6 h-6 sm:w-7 sm:h-7" />
                 <span>快樂營隊</span>
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-4">
