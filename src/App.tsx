@@ -40,9 +40,9 @@ function IntroAnimation({ onComplete }: { onComplete: () => void }) {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 1.2, ease: "easeOut" }}
-          className="flex flex-col items-center gap-4"
+          className="flex flex-col items-center gap-4 px-4 w-full"
         >
-          <span className="font-bold text-xl sm:text-2xl text-neutral-800 tracking-[0.25em] ml-[0.25em]">
+          <span className="font-bold whitespace-nowrap text-[15px] sm:text-xl md:text-2xl text-neutral-800 tracking-[0.1em] sm:tracking-[0.25em] ml-[0.1em] sm:ml-[0.25em]">
             社團法人中華陪童長大兒少關懷協會
           </span>
           <div className="w-16 h-1 bg-orange-400 rounded-full" />
