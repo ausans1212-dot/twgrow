@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,18 +9,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           
           <div className="lg:col-span-4 flex flex-col justify-center">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="bg-white p-1.5 rounded-xl shadow-sm">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="flex items-center justify-center">
                 <img 
                   src="/LOGO_01.png" 
                   alt="陪伴兒童成長關懷協會 LOGO" 
-                  className="h-10 w-auto object-contain"
+                  className="h-24 sm:h-28 w-auto object-contain scale-[1.3] pb-0.5 sm:scale-[1.4] transform origin-center"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
               </div>
-              <span className="font-bold text-xl text-white tracking-tight">
+              <span className="font-bold text-xl sm:text-2xl text-white tracking-tight">
                 社團法人中華陪童長大兒少關懷協會
               </span>
             </div>
@@ -40,6 +40,14 @@ export default function Footer() {
                  className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-colors cursor-pointer"
                >
                   <Instagram className="w-5 h-5" />
+               </a>
+               <a 
+                 href="https://www.youtube.com/@陪童長大" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors cursor-pointer"
+               >
+                  <Youtube className="w-5 h-5" />
                </a>
             </div>
           </div>
@@ -66,7 +74,12 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-neutral-500 shrink-0" />
-                <span>twgrow2025@twgrow.org.tw</span>
+                <a 
+                  href="mailto:twgrow2025@twgrow.org.tw" 
+                  className="hover:text-orange-400 transition-colors hover:underline underline-offset-4"
+                >
+                  twgrow2025@twgrow.org.tw
+                </a>
               </li>
             </ul>
           </div>

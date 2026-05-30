@@ -1,5 +1,79 @@
 import { motion } from 'motion/react';
-import { Sparkles, Users } from 'lucide-react';
+import { Sparkles, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useRef, useState } from 'react';
+
+function ImageCarousel({ images, altPrefix }: { images: string[], altPrefix: string }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const scrollByAmount = (direction: 1 | -1) => {
+    if (scrollRef.current) {
+      const container = scrollRef.current;
+      const scrollAmount = container.clientWidth * direction;
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const container = scrollRef.current;
+      const index = Math.round(container.scrollLeft / container.clientWidth);
+      setCurrentIndex(index);
+    }
+  };
+
+  return (
+    <div className="relative group rounded-3xl overflow-hidden shadow-lg">
+      <div 
+        ref={scrollRef}
+        onScroll={handleScroll}
+        className="flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+      >
+        {images.map((imgSrc, idx) => (
+          <img
+            key={idx}
+            src={imgSrc}
+            alt={`${altPrefix} ${idx + 1}`}
+            className="w-full shrink-0 snap-center object-cover aspect-[4/3]"
+            referrerPolicy="no-referrer"
+          />
+        ))}
+      </div>
+      
+      {/* 左右切換按鈕 */}
+      <button 
+        onClick={() => scrollByAmount(-1)}
+        className={`absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-neutral-800 shadow-md flex items-center justify-center transition-opacity z-10 ${
+          currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-0 group-hover:opacity-100'
+        }`}
+        aria-label="上一張圖片"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+      <button 
+        onClick={() => scrollByAmount(1)}
+        className={`absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-neutral-800 shadow-md flex items-center justify-center transition-opacity z-10 ${
+          currentIndex === images.length - 1 ? 'opacity-0 pointer-events-none' : 'opacity-0 group-hover:opacity-100'
+        }`}
+        aria-label="下一張圖片"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
+
+      {/* 左右滑動提示點 */}
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 pointer-events-none z-10">
+        {images.map((_, idx) => (
+          <div 
+            key={idx} 
+            className={`w-2 h-2 rounded-full shadow-sm border border-black/10 transition-colors ${
+              currentIndex === idx ? 'bg-white' : 'bg-white/60'
+            }`}
+          ></div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Activities() {
   return (
@@ -42,25 +116,10 @@ export default function Activities() {
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <div className="relative group">
-                <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                  {['/course_01.jpg', '/course_02.jpg', '/course_03.jpg'].map((imgSrc, idx) => (
-                    <img
-                      key={idx}
-                      src={imgSrc}
-                      alt={`活動紀錄 ${idx + 1}`}
-                      className="w-full shrink-0 snap-center rounded-3xl shadow-lg object-cover aspect-[4/3]"
-                      referrerPolicy="no-referrer"
-                    />
-                  ))}
-                </div>
-                {/* 左右滑動提示點 */}
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 pointer-events-none">
-                  <div className="w-2 h-2 rounded-full bg-white shadow-sm border border-black/10"></div>
-                  <div className="w-2 h-2 rounded-full bg-white/60 shadow-sm border border-black/10"></div>
-                  <div className="w-2 h-2 rounded-full bg-white/60 shadow-sm border border-black/10"></div>
-                </div>
-              </div>
+              <ImageCarousel 
+                images={['/course_01.jpg', '/course_02.jpg', '/course_03.jpg']} 
+                altPrefix="活動紀錄" 
+              />
             </motion.div>
           </div>
 
@@ -71,26 +130,10 @@ export default function Activities() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="relative group">
-                <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-                  {['/course_04.jpg', '/course_05.jpg', '/course_06.jpg', '/course_07.jpg'].map((imgSrc, idx) => (
-                    <img
-                      key={idx}
-                      src={imgSrc}
-                      alt={`營隊活動紀錄 ${idx + 1}`}
-                      className="w-full shrink-0 snap-center rounded-3xl shadow-lg object-cover aspect-[4/3]"
-                      referrerPolicy="no-referrer"
-                    />
-                  ))}
-                </div>
-                {/* 左右滑動提示點 */}
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 pointer-events-none">
-                  <div className="w-2 h-2 rounded-full bg-white shadow-sm border border-black/10"></div>
-                  <div className="w-2 h-2 rounded-full bg-white/60 shadow-sm border border-black/10"></div>
-                  <div className="w-2 h-2 rounded-full bg-white/60 shadow-sm border border-black/10"></div>
-                  <div className="w-2 h-2 rounded-full bg-white/60 shadow-sm border border-black/10"></div>
-                </div>
-              </div>
+              <ImageCarousel 
+                images={['/course_04.jpg', '/course_05.jpg', '/course_06.jpg', '/course_07.jpg']} 
+                altPrefix="營隊活動紀錄" 
+              />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
