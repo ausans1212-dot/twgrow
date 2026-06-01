@@ -127,15 +127,6 @@ function VideoCarousel() {
             />
           ))}
         </div>
-        
-        <div className="min-h-[80px]">
-          <h3 className="text-xl font-bold text-neutral-900 mb-2 transition-all">
-            {videos[currentIndex].title}
-          </h3>
-          <p className="text-neutral-600 leading-relaxed transition-all">
-            {videos[currentIndex].description}
-          </p>
-        </div>
       </div>
     </div>
   );
