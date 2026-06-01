@@ -1,12 +1,36 @@
 import { motion } from 'motion/react';
 import { Sparkles, Users, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 function ImageCarousel({ images, altPrefix }: { images: string[], altPrefix: string }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const scrollTo = useCallback((index: number) => {
+    if (scrollRef.current) {
+      const container = scrollRef.current;
+      const targetScrollLeft = container.clientWidth * index;
+      container.scrollTo({ left: targetScrollLeft, behavior: 'smooth' });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!isAutoPlaying || images.length <= 1) return;
+
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => {
+        const next = (prev + 1) % images.length;
+        scrollTo(next);
+        return next;
+      });
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [isAutoPlaying, images.length, scrollTo]);
 
   const scrollByAmount = (direction: 1 | -1) => {
+    setIsAutoPlaying(false);
     if (scrollRef.current) {
       const container = scrollRef.current;
       const scrollAmount = container.clientWidth * direction;

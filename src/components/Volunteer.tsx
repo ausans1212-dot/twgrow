@@ -1,7 +1,16 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { HeartHandshake, CalendarHeart } from 'lucide-react';
+import { HeartHandshake, CalendarHeart, CheckCircle } from 'lucide-react';
 
 export default function Volunteer() {
+  const [showForm, setShowForm] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   const roles = [
     {
       icon: <CalendarHeart className="w-6 h-6 text-rose-500" />,
@@ -47,12 +56,46 @@ export default function Volunteer() {
                 ))}
               </div>
 
-              <a 
-                href="#"
-                className="inline-flex items-center justify-center bg-neutral-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-500 hover:shadow-lg transition-all w-full sm:w-auto"
-              >
-                我要報名志工
-              </a>
+              {submitted ? (
+                <div className="bg-green-50 text-green-700 p-6 rounded-2xl border border-green-200 flex items-center justify-center gap-3">
+                  <CheckCircle className="w-6 h-6" />
+                  <span className="font-bold text-lg">感謝您的報名，我們會盡快與您聯絡！</span>
+                </div>
+              ) : showForm ? (
+                <form onSubmit={handleSubmit} className="bg-white p-6 rounded-2xl shadow-sm border border-neutral-100 space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1">姓名</label>
+                    <input id="name" required type="text" className="w-full px-4 py-2 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="請輸入您的姓名" />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-1">聯絡電話</label>
+                    <input id="phone" required type="tel" className="w-full px-4 py-2 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="請輸入聯絡電話" />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1">Email</label>
+                    <input id="email" required type="email" className="w-full px-4 py-2 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="請輸入 Email" />
+                  </div>
+                  <div>
+                    <label htmlFor="role" className="block text-sm font-medium text-neutral-700 mb-1">想擔任的志工類型</label>
+                    <select id="role" className="w-full px-4 py-2 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                      <option value="活動支援志工">活動支援志工</option>
+                      <option value="專長才藝志工">專長才藝志工</option>
+                      <option value="皆可">皆可</option>
+                    </select>
+                  </div>
+                  <div className="flex gap-3 pt-2">
+                     <button type="button" onClick={() => setShowForm(false)} className="flex-1 py-3 px-4 rounded-lg font-bold text-neutral-600 bg-neutral-100 hover:bg-neutral-200 transition-colors">取消</button>
+                     <button type="submit" className="flex-1 py-3 px-4 rounded-lg font-bold text-white bg-neutral-900 hover:bg-orange-500 transition-colors">送出報名表</button>
+                  </div>
+                </form>
+              ) : (
+                <button 
+                  onClick={() => setShowForm(true)}
+                  className="inline-flex items-center justify-center bg-neutral-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-500 hover:shadow-lg transition-all w-full sm:w-auto"
+                >
+                  我要報名志工
+                </button>
+              )}
             </motion.div>
 
             <motion.div

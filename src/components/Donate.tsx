@@ -1,8 +1,22 @@
+import { useState } from 'react';
 import donateImg from '@/src/assets/images/donate_hope_1779948588468.png';
 import { motion } from 'motion/react';
-import { Heart, CreditCard, Landmark } from 'lucide-react';
+import { Heart, CreditCard, Landmark, Copy, Check } from 'lucide-react';
 
 export default function Donate() {
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      const textToCopy = `銀行代碼：004\n匯款帳號：118-001-029636`;
+      await navigator.clipboard.writeText(textToCopy);
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
+
   return (
     <section id="donate" className="py-24 md:py-16 bg-white min-h-[calc(100vh-5rem)] flex items-center justify-center scroll-mt-20">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,9 +68,27 @@ export default function Donate() {
 
                  {/* Option 3 */}
                 <div id="donate-info" className="p-4 border-2 border-neutral-100 rounded-xl bg-neutral-50 scroll-mt-28">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Landmark className="w-6 h-6 text-neutral-500" />
-                    <h4 className="font-bold text-lg">銀行匯款 / ATM 轉帳</h4>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-3">
+                      <Landmark className="w-6 h-6 text-neutral-500" />
+                      <h4 className="font-bold text-lg">銀行匯款 / ATM 轉帳</h4>
+                    </div>
+                    <button
+                      onClick={handleCopy}
+                      className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-md bg-white border border-neutral-200 text-neutral-600 hover:bg-neutral-50 transition-colors active:scale-95"
+                    >
+                      {isCopied ? (
+                        <>
+                          <Check className="w-3.5 h-3.5 text-green-600" />
+                          <span className="text-green-700">已複製</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-3.5 h-3.5" />
+                          <span>複製帳號</span>
+                        </>
+                      )}
+                    </button>
                   </div>
                   <div className="bg-white p-4 rounded-lg text-sm space-y-2 border border-neutral-200 font-mono">
                     <div className="flex justify-between items-center">
