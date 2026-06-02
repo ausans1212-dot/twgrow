@@ -112,12 +112,8 @@ export default function Footer() {
 
         </div>
         
-        <div className="border-t border-neutral-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-neutral-500">
+        <div className="border-t border-neutral-800 mt-16 pt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-neutral-500">
           <p>© {currentYear} 社團法人中華陪童長大兒少關懷協會. All rights reserved.</p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-white transition-colors">隱私權政策</a>
-            <a href="#" className="hover:text-white transition-colors">服務條款</a>
-          </div>
         </div>
       </div>
     </footer>
