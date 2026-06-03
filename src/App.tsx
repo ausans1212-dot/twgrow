@@ -9,6 +9,7 @@ import Media from './components/Media';
 import Volunteer from './components/Volunteer';
 import Donate from './components/Donate';
 import Footer from './components/Footer';
+import FloatingSocial from './components/FloatingSocial';
 
 function IntroAnimation({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
@@ -86,6 +87,7 @@ export default function App() {
           <Donate />
         </main>
         <Footer />
+        <FloatingSocial />
       </div>
     </>
   );

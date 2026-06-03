@@ -179,6 +179,8 @@ export default function Activities() {
 
         </div>
 
+
+
       </div>
     </section>
   );
