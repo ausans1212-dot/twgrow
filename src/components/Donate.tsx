@@ -5,6 +5,7 @@ import { Heart, CreditCard, Landmark, Copy, Check } from 'lucide-react';
 
 export default function Donate() {
   const [isCopied, setIsCopied] = useState(false);
+  const [ripples, setRipples] = useState<{x: number, y: number, id: number}[]>([]);
 
   const handleCopy = async () => {
     try {
@@ -57,15 +58,34 @@ export default function Donate() {
               
               <div className="space-y-4">
                 {/* Option 2 */}
-                <a 
+                <motion.a 
                   href="https://neti.cc/Qj74MeK"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex justify-center items-center gap-3 bg-orange-500 text-white px-8 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-orange-600 transition-all active:scale-95"
+                  className="relative overflow-hidden w-full flex justify-center items-center gap-3 bg-orange-500 text-white px-8 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl shadow-md transition-colors hover:bg-orange-600"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={(e) => {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    setRipples(prev => [...prev, { x, y, id: Date.now() }]);
+                  }}
                 >
-                  <CreditCard className="w-6 h-6 md:w-7 md:h-7" />
-                  <span>線上捐款</span>
-                </a>
+                  {ripples.map(r => (
+                    <motion.span
+                      key={r.id}
+                      initial={{ scale: 0, opacity: 0.5 }}
+                      animate={{ scale: 4, opacity: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="absolute bg-white rounded-full w-32 h-32 -ml-16 -mt-16 pointer-events-none"
+                      style={{ left: r.x, top: r.y }}
+                      onAnimationComplete={() => setRipples(prev => prev.filter(ripple => ripple.id !== r.id))}
+                    />
+                  ))}
+                  <CreditCard className="w-6 h-6 md:w-7 md:h-7 relative z-10" />
+                  <span className="relative z-10">線上捐款</span>
+                </motion.a>
 
                  {/* Option 3 */}
                 <div id="donate-info" className="p-4 border-2 border-neutral-100 rounded-xl bg-neutral-50 scroll-mt-28">

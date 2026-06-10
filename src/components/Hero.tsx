@@ -27,6 +27,14 @@ export default function Hero() {
             </p>
             <div className="flex flex-col flex-wrap sm:flex-row gap-4">
               <a
+                href="https://neti.cc/Qj74MeK"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex justify-center flex-1 sm:flex-none items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-md hover:bg-orange-600 transition-all hover:-translate-y-0.5 active:scale-95 w-full sm:w-auto"
+              >
+                加入資助行列
+              </a>
+              <a
                 href="#about"
                 className="inline-flex justify-center flex-1 sm:flex-none items-center gap-2 bg-white text-neutral-700 border border-neutral-200 px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-50 hover:border-neutral-300 transition-all w-full sm:w-auto"
               >
