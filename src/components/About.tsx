@@ -16,7 +16,7 @@ export default function About() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-xl">
               <img
-                src="/BN_02jpg.jpg"
+                src="/BN_02.jpg"
                 alt="志工與孩子一起閱讀故事書"
                 className="w-full h-auto object-cover aspect-[4/3]"
                 referrerPolicy="no-referrer"
