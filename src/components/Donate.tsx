@@ -58,9 +58,10 @@ export default function Donate() {
               <div className="space-y-4">
                 {/* Option 2 */}
                 <a 
-                  href="#"
+                  href="https://neti.cc/Qj74MeK"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full flex justify-center items-center gap-3 bg-orange-500 text-white px-8 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 hover:bg-orange-600 transition-all active:scale-95"
-                  onClick={(e) => e.preventDefault()}
                 >
                   <CreditCard className="w-6 h-6 md:w-7 md:h-7" />
                   <span>線上捐款</span>
@@ -104,7 +105,9 @@ export default function Donate() {
                       <span className="font-bold text-neutral-800 tracking-wider text-base">118-001-029636</span>
                     </div>
                   </div>
-                  <p className="text-xs text-neutral-400 mt-3 text-center">匯款後請來電或填寫表單告知，以便開立收據。</p>
+                  <p className="text-xs text-neutral-500 mt-3 text-center leading-relaxed">
+                    轉帳完成後，請不吝透過 Email 或粉專私訊告知您的<strong className="font-bold text-neutral-700">姓名、電話、轉帳日期及帳號末五碼</strong>。謝謝您的善心與協助！
+                  </p>
                 </div>
 
               </div>
