@@ -10,14 +10,14 @@ export default function Navbar() {
   const mainLinks = [
     { name: '最新消息', href: '#news' },
     // 關於我們 is handled with dropdown
-    { name: '服務項目', href: '#services' },
     { name: '志工招募', href: '#volunteer' },
-    { name: '助童芳名錄', href: '#honor-roll' },
-    { name: '陪童募款箱認養', href: '#store-partnership' },
+    { name: '公開徵信', href: '#honor-roll' },
+    { name: '募款箱認養', href: '#store-partnership' },
   ];
 
   const aboutSubLinks = [
     { name: '協會簡介與願景', href: '#about' },
+    { name: '服務項目', href: '#services' },
     { name: '陪童日常', href: '#activities' },
     { name: '大小心聲', href: '#media' },
   ];

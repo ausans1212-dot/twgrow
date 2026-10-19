@@ -67,8 +67,13 @@ export default function FloatingSocial() {
 
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-12 h-12 md:w-14 md:h-14 bg-orange-500 rounded-full flex items-center justify-center text-white shadow-xl hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-500/30 transition-all hover:scale-105 active:scale-95 z-10 ${!isOpen ? 'opacity-50 md:opacity-100 hover:opacity-100' : ''}`}
+        className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white shadow-lg backdrop-blur-xs focus:outline-none focus:ring-4 focus:ring-orange-500/30 transition-all hover:scale-105 active:scale-95 z-10 cursor-pointer ${
+          isOpen
+            ? 'bg-orange-500 hover:bg-orange-600 opacity-100 shadow-xl'
+            : 'bg-orange-500/50 hover:bg-orange-500/90 hover:opacity-100 opacity-60'
+        }`}
         aria-label="社群與分享"
+        title="分享與社群"
       >
         <motion.div
            initial={false}

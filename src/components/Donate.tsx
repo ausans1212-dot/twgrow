@@ -51,7 +51,7 @@ export default function Donate() {
                   href="#honor-roll"
                   className="inline-flex items-center gap-1.5 text-orange-100 hover:text-white underline underline-offset-4 font-medium transition-colors"
                 >
-                  <span>查看公開徵信【助童芳名錄】</span>
+                  <span>查看【公開徵信】名單</span>
                   <span>→</span>
                 </a>
                 <span className="hidden sm:inline text-orange-300/60">·</span>
@@ -59,7 +59,7 @@ export default function Donate() {
                   href="#store-partnership"
                   className="inline-flex items-center gap-1.5 text-orange-100 hover:text-white underline underline-offset-4 font-medium transition-colors"
                 >
-                  <span>店家夥伴【陪童募款箱認養】</span>
+                  <span>店家夥伴【募款箱認養】</span>
                   <span>→</span>
                 </a>
               </div>

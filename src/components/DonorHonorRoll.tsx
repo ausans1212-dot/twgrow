@@ -12,7 +12,6 @@ import {
   ChevronLeft,
   ChevronRight,
   ChevronUp,
-  Receipt,
   Sparkles,
   Eye,
   BookOpen,
@@ -172,9 +171,9 @@ export default function DonorHonorRoll() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100/80 text-xs font-semibold tracking-wider text-orange-700 mb-3.5">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-orange-100/80 text-xs font-semibold tracking-wider text-orange-700 mb-3.5 shadow-2xs">
             <Heart className="w-3.5 h-3.5 fill-orange-500 text-orange-500" />
-            <span>公開徵信</span>
+            <span>感謝有你</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight mb-4">
             公開徵信
@@ -202,7 +201,7 @@ export default function DonorHonorRoll() {
           </div>
 
           {/* Key Campaign Meta Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-5 text-xs text-neutral-600">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-5 text-xs text-neutral-600">
             <div className="flex items-start gap-2.5">
               <Calendar className="w-4 h-4 text-neutral-400 shrink-0 mt-0.5" />
               <div>
@@ -215,13 +214,6 @@ export default function DonorHonorRoll() {
               <div>
                 <span className="block font-semibold text-neutral-800">勸募許可文號</span>
                 <span className="font-mono text-neutral-600">{CAMPAIGN_INFO.permitNumber}</span>
-              </div>
-            </div>
-            <div className="flex items-start gap-2.5">
-              <Receipt className="w-4 h-4 text-neutral-400 shrink-0 mt-0.5" />
-              <div>
-                <span className="block font-semibold text-neutral-800">法定製表日期</span>
-                <span className="font-mono text-neutral-600">{CAMPAIGN_INFO.reportDate}</span>
               </div>
             </div>
             <div className="flex items-start gap-2.5">
@@ -587,7 +579,7 @@ export default function DonorHonorRoll() {
                         ) : (
                           <tr>
                             <td colSpan={4} className="py-12 text-center text-neutral-400">
-                              查無符合「{searchTerm}」的助童芳名錄資料，請嘗試其他關鍵字或切換月份。
+                              查無符合「{searchTerm}」的公開徵信資料，請嘗試其他關鍵字或切換月份。
                             </td>
                           </tr>
                         )}
@@ -675,7 +667,7 @@ export default function DonorHonorRoll() {
         </div>
 
         {/* Notice & Privacy Policy / Call to Action */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-xs flex flex-col justify-between">
             <div>
@@ -683,11 +675,8 @@ export default function DonorHonorRoll() {
                 <ShieldCheck className="w-5 h-5 text-emerald-600" />
                 <span>個人資料保護與徵信隱碼原則</span>
               </div>
-              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-3">
-                本會恪遵《公益勸募條例》及《個人資料保護法》，為保護捐贈人個人隱私，捐款人之姓名中間字皆採星號隱碼遮蔽（無小姐先生稱謂，亦無公開收據編號）。
-              </p>
-              <p className="text-xs text-neutral-500 leading-relaxed">
-                若您希望以「完全匿名」刊登，或需更正徵信名稱與收據開立資訊，歡迎隨時與本會聯繫，秘書處將迅速協助處理。
+              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                本會恪遵《公益勸募條例》及《個人資料保護法》，捐款人姓名中間字以星號遮蔽。如需完全匿名或更正徵信名稱、收據資訊，請與本會聯繫。
               </p>
             </div>
             <div className="mt-5 pt-4 border-t border-neutral-100 flex flex-wrap gap-4 text-xs">

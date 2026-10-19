@@ -60,8 +60,8 @@ export default function Footer() {
               <li><a href="#activities" className="hover:text-orange-400 transition-colors">陪童日常</a></li>
               <li><a href="#media" className="hover:text-orange-400 transition-colors">大小心聲</a></li>
               <li><a href="#volunteer" className="hover:text-orange-400 transition-colors">志工招募</a></li>
-              <li><a href="#honor-roll" className="hover:text-orange-400 transition-colors">助童芳名錄</a></li>
-              <li><a href="#store-partnership" className="hover:text-orange-400 transition-colors">陪童募款箱認養</a></li>
+              <li><a href="#honor-roll" className="hover:text-orange-400 transition-colors">公開徵信</a></li>
+              <li><a href="#store-partnership" className="hover:text-orange-400 transition-colors">募款箱認養</a></li>
               <li><a href="#donate" className="hover:text-orange-400 transition-colors">支持我們</a></li>
             </ul>
           </div>

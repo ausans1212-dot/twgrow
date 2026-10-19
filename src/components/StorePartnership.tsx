@@ -53,7 +53,7 @@ export default function StorePartnership() {
             <span>Store Donation Box Adoption</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight mb-4">
-            陪童募款箱認養
+            募款箱認養
           </h2>
           <p className="text-lg sm:text-xl text-neutral-700 font-medium leading-relaxed">
             邀請店家申請放置募款箱，零錢小善匯聚愛心守護孩子
