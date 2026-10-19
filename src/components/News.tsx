@@ -43,32 +43,32 @@ export interface NewsItem {
 const INITIAL_NEWS: NewsItem[] = [
   {
     id: 'news-beetle-dream',
-    title: '【公益陪伴合作】昆蟲哲學「甲蟲載夢計畫」啟動：每售出1對彩虹鍬形蟲成蟲，提撥30%收益支持假日陪伴',
+    title: '【公益陪伴合作】昆蟲哲學甲蟲生態館「甲蟲載夢計畫」啟動：每售出1對彩虹鍬形蟲成蟲，提撥30%收益支持假日陪伴',
     category: '專案公告',
     date: '2026/10/18',
     isPinned: true,
-    highlightTag: '昆蟲哲學 × 愛心提撥 30%',
+    highlightTag: '昆蟲哲學甲蟲生態館 × 愛心提撥 30%',
     image: '/beetle_poster.png',
-    summary: '「一隻甲蟲，一份陪伴」！昆蟲哲學愛心發起公益提撥活動，活動期間購買指定昆蟲，每售出1對彩虹鍬形蟲成蟲，即提撥銷售收入30%捐助「孩童假日陪伴計劃」。',
-    content: `🌿 昆蟲哲學－公益陪伴活動【甲蟲載夢計畫】
+    summary: '「一隻甲蟲，一份陪伴」！昆蟲哲學甲蟲生態館愛心發起公益提撥活動，活動期間購買指定昆蟲，每售出1對彩虹鍬形蟲成蟲，即提撥銷售收入30%捐助「孩童假日陪伴計劃」。',
+    content: `🌿 昆蟲哲學甲蟲生態館－公益陪伴活動【甲蟲載夢計畫】
 「一隻甲蟲，一份陪伴」
 
-社團法人中華陪童長大兒少關懷協會誠摯感謝「昆蟲哲學」愛心發起【甲蟲載夢計畫】！
+社團法人中華陪童長大兒少關懷協會誠摯感謝「昆蟲哲學甲蟲生態館」愛心發起【甲蟲載夢計畫】！
 透過微小而堅韌的生命教育，將愛心化作溫暖實際的支持力量，陪伴孩子在假日時光獲得充分照顧、探索自然奧秘與快樂成長。
 
 ━━━━━━━━━━━━━━━━━━━
 📌【公益提撥方案】
-於活動期間至「昆蟲哲學」購買指定昆蟲：
+於活動期間至「昆蟲哲學甲蟲生態館」購買指定昆蟲：
 ✨ 每售出 1 對「彩虹鍬形蟲成蟲」
 ✨ 自銷售收入提撥 30% 捐贈公益！
 
 💝【捐款受贈專案】
 捐贈予：社團法人陪童長大兒少關懷協會「孩童假日陪伴計劃」
-「您帶回一個值得細心照顧的小生命，昆蟲哲學也替這份相遇轉化成支持孩子成長的力量。」
+「您帶回一個值得細心照顧的小生命，昆蟲哲學甲蟲生態館也替這份相遇轉化成支持孩子成長的力量。」
 
 📍【門市與活動資訊】
 • 活動期間：即日起至售完為止
-• 合作店家：昆蟲哲學
+• 合作店家：昆蟲哲學甲蟲生態館
 • 門市地址：高雄市左營區民族一路1103號
 • 公開承諾：［捐款成果將由店家與協會定期公開］
 ━━━━━━━━━━━━━━━━━━━
@@ -77,7 +77,7 @@ const INITIAL_NEWS: NewsItem[] = [
     linkText: '查看助童芳名錄',
     linkUrl: '#honor-roll',
     partnerInfo: {
-      partnerName: '昆蟲哲學',
+      partnerName: '昆蟲哲學甲蟲生態館',
       offer: '購買指定昆蟲：每售出 1 對彩虹鍬形蟲成蟲',
       donationRatio: '銷售收入提撥 30% 捐贈公益',
       targetProject: '社團法人中華陪童長大兒少關懷協會「孩童假日陪伴計劃」',
@@ -567,19 +567,19 @@ export default function News() {
                     <div className="flex items-center justify-between bg-neutral-100 p-3 rounded-xl text-xs text-neutral-600">
                       <div className="flex items-center gap-2">
                         <ImageIcon className="w-4 h-4 text-neutral-500" />
-                        <span>官方活動海報視覺（保持 A2 完整比例，不變形壓縮）</span>
+                        <span>官方活動海報視覺（點擊海報可開啟「全螢幕完整原圖」）</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <button
-                          onClick={() => setIsPosterZoomed(!isPosterZoomed)}
+                          onClick={() => setIsPosterZoomed(true)}
                           className="px-2.5 py-1 rounded bg-white hover:bg-neutral-200 border border-neutral-300 font-medium text-neutral-700 flex items-center gap-1 cursor-pointer transition-colors"
                         >
                           <Maximize2 className="w-3.5 h-3.5" />
-                          <span>{isPosterZoomed ? '標準顯示' : '全屏放大檢視'}</span>
+                          <span>點擊全螢幕放大</span>
                         </button>
                         <a
                           href={selectedNews.image}
-                          download="昆蟲哲學甲蟲載夢計畫海報.png"
+                          download="昆蟲哲學甲蟲生態館甲蟲載夢計畫海報.png"
                           className="px-2.5 py-1 rounded bg-white hover:bg-neutral-200 border border-neutral-300 font-medium text-neutral-700 flex items-center gap-1 transition-colors"
                         >
                           <Download className="w-3.5 h-3.5" />
@@ -588,15 +588,23 @@ export default function News() {
                       </div>
                     </div>
 
-                    {/* Poster Canvas Frame */}
-                    <div className={`relative mx-auto rounded-2xl overflow-hidden border border-neutral-200 shadow-md bg-stone-100 flex items-center justify-center ${
-                      isPosterZoomed ? 'w-full max-h-[85vh]' : 'max-w-xl max-h-[65vh]'
-                    }`}>
+                    {/* Poster Canvas Frame - Complete uncropped view, clicking opens lightbox */}
+                    <div 
+                      onClick={() => setIsPosterZoomed(true)}
+                      className="relative mx-auto rounded-2xl overflow-hidden border border-neutral-200 shadow-md bg-stone-100 flex items-center justify-center cursor-zoom-in group max-w-2xl py-4 px-2"
+                      title="點擊放大檢視整張完整海報"
+                    >
                       <img 
                         src={selectedNews.image} 
                         alt="活動官方宣傳海報" 
-                        className="w-full h-auto max-h-full object-contain"
+                        className="w-auto h-auto max-w-full max-h-[70vh] object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-[1.02]" 
                       />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center pointer-events-none">
+                        <span className="opacity-0 group-hover:opacity-100 bg-neutral-900/80 text-white text-xs px-3 py-1.5 rounded-full backdrop-blur-xs flex items-center gap-1.5 transition-opacity shadow-lg">
+                          <Maximize2 className="w-3.5 h-3.5" />
+                          <span>點擊查看完整大圖</span>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -628,6 +636,52 @@ export default function News() {
                   </button>
                 </div>
               </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Fullscreen Poster Lightbox - 100% Uncropped Original Image */}
+      <AnimatePresence>
+        {isPosterZoomed && selectedNews && selectedNews.image && (
+          <div 
+            onClick={() => setIsPosterZoomed(false)}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-6 bg-black/90 backdrop-blur-md cursor-zoom-out"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.92 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-full max-h-[96vh] flex flex-col items-center justify-center cursor-default"
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setIsPosterZoomed(false)}
+                className="absolute -top-12 right-0 sm:right-2 text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-semibold"
+                title="關閉海報檢視"
+              >
+                <span>關閉大圖</span>
+                <X className="w-5 h-5" />
+              </button>
+
+              {/* Download button in lightbox */}
+              <a
+                href={selectedNews.image}
+                download="昆蟲哲學甲蟲生態館甲蟲載夢計畫海報.png"
+                className="absolute -top-12 left-0 sm:left-2 text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors flex items-center gap-1.5 text-xs font-semibold"
+                title="下載海報原圖"
+              >
+                <Download className="w-4 h-4" />
+                <span>下載原始海報圖檔</span>
+              </a>
+
+              {/* Pure uncropped original poster image */}
+              <img
+                src={selectedNews.image}
+                alt={selectedNews.title}
+                className="max-w-[94vw] max-h-[88vh] sm:max-h-[92vh] w-auto h-auto object-contain rounded-xl shadow-2xl border border-white/20 select-none"
+              />
             </motion.div>
           </div>
         )}

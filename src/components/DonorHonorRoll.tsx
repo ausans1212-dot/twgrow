@@ -174,10 +174,10 @@ export default function DonorHonorRoll() {
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100/80 text-xs font-semibold tracking-wider text-orange-700 mb-3.5">
             <Heart className="w-3.5 h-3.5 fill-orange-500 text-orange-500" />
-            <span>助童芳名錄</span>
+            <span>公開徵信</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 tracking-tight mb-4">
-            助童芳名錄
+            公開徵信
           </h2>
           <p className="text-base sm:text-lg text-neutral-600 font-medium leading-relaxed">
             謝謝每一位陪伴孩子走過風雨、溫暖綻放的你。專款專用、依法全額公開徵信。
@@ -198,12 +198,6 @@ export default function DonorHonorRoll() {
               <p className="text-xs sm:text-sm text-neutral-500 mt-0.5">
                 辦理單位：{CAMPAIGN_INFO.organizer}
               </p>
-            </div>
-            <div className="shrink-0">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full text-xs font-medium">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                公開徵信備查中
-              </span>
             </div>
           </div>
 
