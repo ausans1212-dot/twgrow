@@ -2,11 +2,14 @@ import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import News from './components/News';
 import About from './components/About';
 import Services from './components/Services';
 import Activities from './components/Activities';
 import Media from './components/Media';
 import Volunteer from './components/Volunteer';
+import DonorHonorRoll from './components/DonorHonorRoll';
+import StorePartnership from './components/StorePartnership';
 import Donate from './components/Donate';
 import Footer from './components/Footer';
 import FloatingSocial from './components/FloatingSocial';
@@ -79,11 +82,14 @@ export default function App() {
         <Navbar />
         <main>
           <Hero />
+          <News />
           <About />
           <Services />
           <Activities />
           <Media />
           <Volunteer />
+          <DonorHonorRoll />
+          <StorePartnership />
           <Donate />
         </main>
         <Footer />

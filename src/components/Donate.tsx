@@ -46,6 +46,23 @@ export default function Donate() {
               <p className="text-lg md:text-xl text-orange-50 mb-8 max-w-lg leading-relaxed">
                 關懷行動的延續需要您的支持。無論金額大小，您的捐款都能幫助我們培育更多志工、提供更好的學習資源，讓愛生生不息。
               </p>
+              <div className="flex flex-col sm:flex-row gap-3 text-sm">
+                <a
+                  href="#honor-roll"
+                  className="inline-flex items-center gap-1.5 text-orange-100 hover:text-white underline underline-offset-4 font-medium transition-colors"
+                >
+                  <span>查看公開徵信【助童芳名錄】</span>
+                  <span>→</span>
+                </a>
+                <span className="hidden sm:inline text-orange-300/60">·</span>
+                <a
+                  href="#store-partnership"
+                  className="inline-flex items-center gap-1.5 text-orange-100 hover:text-white underline underline-offset-4 font-medium transition-colors"
+                >
+                  <span>店家夥伴【陪童募款箱認養】</span>
+                  <span>→</span>
+                </a>
+              </div>
             </motion.div>
 
             <motion.div

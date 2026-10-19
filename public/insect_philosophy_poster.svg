@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 1188" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF9F2"/>
+      <stop offset="50%" stop-color="#F7F3E8"/>
+      <stop offset="100%" stop-color="#EFE8D6"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#F3E5AB"/>
+      <stop offset="100%" stop-color="#AA7C11"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="beetleSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E63946"/>
+      <stop offset="25%" stop-color="#F4A261"/>
+      <stop offset="50%" stop-color="#2A9D8F"/>
+      <stop offset="75%" stop-color="#264653"/>
+      <stop offset="100%" stop-color="#9B5DE5"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1B4332" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="840" height="1188" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Decorative Border -->
+  <rect x="24" y="24" width="792" height="1140" rx="16" fill="none" stroke="#2D6A4F" stroke-width="2" stroke-opacity="0.3"/>
+  <rect x="32" y="32" width="776" height="1124" rx="12" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Top Decorative Leaves -->
+  <path d="M 40 40 Q 80 50 110 90 Q 70 80 40 40 Z" fill="#2D6A4F" opacity="0.4"/>
+  <path d="M 800 40 Q 760 50 730 90 Q 770 80 800 40 Z" fill="#2D6A4F" opacity="0.4"/>
+
+  <!-- Header Organizer Brand -->
+  <g transform="translate(420, 90)" text-anchor="middle">
+    <rect x="-240" y="-28" width="480" height="42" rx="21" fill="#FFFFFF" filter="url(#cardShadow)"/>
+    <text y="0" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="16" font-weight="700" fill="#2D6A4F" letter-spacing="2">
+      昆蟲哲學  ✕  中華陪童長大兒少關懷協會
+    </text>
+  </g>
+
+  <!-- Main Campaign Title -->
+  <g transform="translate(420, 180)" text-anchor="middle">
+    <text y="0" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="44" font-weight="900" fill="#1B4332" letter-spacing="4">
+      「甲蟲載夢計畫」
+    </text>
+    <text y="48" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="28" font-weight="700" fill="#EA580C" letter-spacing="6">
+      公 益 陪 伴 活 動
+    </text>
+    <!-- Subtitle slogan -->
+    <rect x="-200" y="70" width="400" height="32" rx="16" fill="#2D6A4F" fill-opacity="0.1"/>
+    <text y="92" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="16" font-weight="600" fill="#2D6A4F" letter-spacing="3">
+      「一隻甲蟲，一份陪伴」
+    </text>
+  </g>
+
+  <!-- Illustration Card -->
+  <g transform="translate(120, 320)">
+    <rect width="600" height="280" rx="24" fill="#FFFFFF" filter="url(#cardShadow)"/>
+    <rect x="12" y="12" width="576" height="256" rx="18" fill="#F8FAF7" stroke="#E2E8F0" stroke-width="1"/>
+
+    <!-- Sun rays & nature motif -->
+    <circle cx="300" cy="140" r="90" fill="#FEF3C7" opacity="0.6"/>
+    
+    <!-- Stylized Rainbow Stag Beetle Graphic -->
+    <g transform="translate(300, 135) scale(1.15)">
+      <!-- Mandibles (Jaws) -->
+      <path d="M -14 -35 C -25 -75 -45 -65 -40 -40 C -35 -20 -20 -15 -10 -15 Z" fill="#D4AF37"/>
+      <path d="M 14 -35 C 25 -75 45 -65 40 -40 C 35 -20 20 -15 10 -15 Z" fill="#D4AF37"/>
+      
+      <!-- Head -->
+      <path d="M -22 -20 L 22 -20 L 18 -2 L -18 -2 Z" fill="#1B4332"/>
+      
+      <!-- Thorax (Chest) with iridescent sheen -->
+      <ellipse cx="0" cy="10" rx="26" ry="16" fill="url(#beetleSheen)"/>
+      <ellipse cx="0" cy="10" rx="22" ry="12" fill="#D4AF37" opacity="0.3"/>
+      
+      <!-- Elytra (Wing covers) with rainbow metallic shine -->
+      <path d="M -24 24 C -28 55 -22 80 0 95 C 22 80 28 55 24 24 Z" fill="url(#beetleSheen)"/>
+      <line x1="0" y1="24" x2="0" y2="95" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.4"/>
+      
+      <!-- Highlights -->
+      <path d="M -16 35 Q -18 60 -4 80" stroke="#FFF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+      <path d="M 16 35 Q 18 60 4 80" stroke="#FFF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+
+      <!-- Legs -->
+      <path d="M -22 -5 Q -45 -15 -55 -5" stroke="#1B4332" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <path d="M 22 -5 Q 45 -15 55 -5" stroke="#1B4332" stroke-width="4" stroke-linecap="round" fill="none"/>
+      
+      <path d="M -25 15 Q -55 20 -60 35" stroke="#1B4332" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <path d="M 25 15 Q 55 20 60 35" stroke="#1B4332" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+      <path d="M -22 35 Q -50 55 -45 80" stroke="#1B4332" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <path d="M 22 35 Q 50 55 45 80" stroke="#1B4332" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+      <!-- Little Heart carried by the Beetle -->
+      <g transform="translate(0, -50) scale(0.9)">
+        <path d="M 0 -8 C -10 -22 -24 -8 0 12 C 24 -8 10 -22 0 -8 Z" fill="#E11D48"/>
+        <circle cx="-5" cy="-7" r="2" fill="#FFFFFF" opacity="0.6"/>
+      </g>
+    </g>
+
+    <!-- Species name tag -->
+    <text x="300" y="245" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="14" font-weight="700" fill="#2D6A4F" text-anchor="middle" letter-spacing="2">
+      彩虹鍬形蟲（Phalacrognathus muelleri）
+    </text>
+  </g>
+
+  <!-- Big Impact Donation Banner -->
+  <g transform="translate(120, 630)">
+    <rect width="600" height="120" rx="20" fill="url(#badgeGrad)" filter="url(#cardShadow)"/>
+    
+    <text x="300" y="42" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="18" font-weight="700" fill="#FFEDD5" text-anchor="middle" letter-spacing="2">
+      凡購買指定昆蟲：每售出 1 對彩虹鍬形蟲成蟲
+    </text>
+    
+    <text x="300" y="90" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="34" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">
+      提撥 30% 收益支持假日陪伴
+    </text>
+  </g>
+
+  <!-- Details Content Box -->
+  <g transform="translate(120, 775)">
+    <rect width="600" height="290" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#cardShadow)"/>
+
+    <!-- Item 1: Recipient Project -->
+    <g transform="translate(36, 45)">
+      <circle cx="16" cy="16" r="16" fill="#FEF3C7"/>
+      <text x="16" y="21" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#D97706">💝</text>
+      <text x="46" y="14" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="14" font-weight="700" fill="#78350F">受贈專案</text>
+      <text x="46" y="32" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="15" font-weight="700" fill="#1E293B">中華陪童長大兒少關懷協會「孩有陪伴」家庭支持服務</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="36" y1="95" x2="564" y2="95" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <!-- Item 2: Location -->
+    <g transform="translate(36, 125)">
+      <circle cx="16" cy="16" r="16" fill="#ECFDF5"/>
+      <text x="16" y="21" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#059669">📍</text>
+      <text x="46" y="14" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="14" font-weight="700" fill="#065F46">活動門市</text>
+      <text x="46" y="32" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="15" font-weight="700" fill="#1E293B">昆蟲哲學甲蟲生態館（高雄市左營區民族一路1103號）</text>
+    </g>
+
+    <!-- Divider -->
+    <line x1="36" y1="175" x2="564" y2="175" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <!-- Item 3: Transparency & Period -->
+    <g transform="translate(36, 205)">
+      <circle cx="16" cy="16" r="16" fill="#EFF6FF"/>
+      <text x="16" y="21" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#2563EB">📜</text>
+      <text x="46" y="14" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="14" font-weight="700" fill="#1E40AF">活動期間與公開透明承諾</text>
+      <text x="46" y="32" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="14" font-weight="600" fill="#334155">即日起至售完為止｜［捐款成果將由店家與協會定期公開徵信］</text>
+    </g>
+
+    <!-- Bottom note badge -->
+    <rect x="36" y="248" width="528" height="26" rx="6" fill="#F8FAFC"/>
+    <text x="300" y="265" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle">
+      您帶回一個值得細心照顧的小生命，也替這份相遇轉化成支持孩子成長的力量。
+    </text>
+  </g>
+
+  <!-- Footer Legal / Organizer attribution -->
+  <g transform="translate(420, 1110)" text-anchor="middle">
+    <text y="0" font-family="'PingFang TC', 'Noto Sans TC', sans-serif" font-size="13" font-weight="600" fill="#64748B" letter-spacing="1">
+      主辦單位：昆蟲哲學甲蟲生態館　｜　受贈單位：社團法人中華陪童長大兒少關懷協會
+    </text>
+  </g>
+</svg>
