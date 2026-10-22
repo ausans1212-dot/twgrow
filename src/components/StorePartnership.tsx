@@ -122,7 +122,7 @@ export default function StorePartnership() {
             邀請店家申請放置募款箱，零錢小善匯聚愛心守護孩子
           </p>
           <p className="text-sm text-neutral-500 mt-3 max-w-2xl mx-auto leading-relaxed">
-            店家不需額外負擔大筆成本，只需撥出櫃檯一隅擺放「陪童募款箱」。讓顧客每次結帳找零的微小善意，匯聚成陪伴偏鄉弱勢孩子健康成長、安心就學的堅實力量。
+            店家不需額外負擔大筆成本，只需撥出櫃檯一隅擺放「陪童募款箱」。讓顧客每次結帳找零的微小善意，匯聚成陪伴弱勢孩子健康成長、安心就學的堅實力量。
           </p>
         </div>
 
@@ -181,7 +181,7 @@ export default function StorePartnership() {
             <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex items-center justify-center">
               <div className="w-full max-w-[420px] aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl relative bg-stone-100 border border-stone-200/60">
                 <img
-                  src="/donation%20box.png?v=20261022"
+                  src="/donation%20box02.png?v=20261022"
                   alt="店鋪櫃檯放置陪童透明壓克力零錢募款箱"
                   className="w-full h-full object-cover object-center"
                 />
