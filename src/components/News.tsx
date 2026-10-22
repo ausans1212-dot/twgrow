@@ -92,9 +92,9 @@ const INITIAL_NEWS: NewsItem[] = [
     date: '2026/10/15',
     isPinned: true,
     summary: '本會依法經衛生福利部核准勸募許可（衛部救字第1151361110號），專款專用挹注於弱勢兒少假日課後陪伴、家庭支持與品格輔導。',
-    content: `社團法人中華陪童長大兒少關懷協會正式展開「孩有陪伴」假日陪伴照顧暨家庭支持服務公益勸募專案！\n\n一、勸募活動期間：2026年03月18日至2027年02月01日\n二、許可文號：衛部救字第1151361110號\n三、捐贈用途：皆為本專案勸募財務支出專款專用。\n\n我們深信，每位孩子都值得在愛與關懷中長大。誠摯邀請社會大眾與企業夥伴攜手加入資助行列，為需要陪伴的孩子鋪設安心成長的道路。`,
-    linkText: '查看公開徵信',
-    linkUrl: '#honor-roll'
+    content: `社團法人中華陪童長大兒少關懷協會正式展開「孩有陪伴」假日陪伴照顧暨家庭支持服務公益勸募專案！\n\n一、勸募活動期間：2026年03月18日至2027年02月01日\n二、許可文號：衛部救字第1151361110號\n三、捐贈用途：皆為本專案勸募財務支出專款專用。\n\n我們深信，每位孩子都值得在愛與關懷中長大。誠摯邀請社會大眾與企業夥伴攜手加入資助行列，為需要陪伴的孩子鋪設安心成長的道路。\n\n完整計畫內容及經費資訊連結（公益勸募管理系統）：\nhttps://sasw.mohw.gov.tw/app39/fundactivity/fundactivityDetails/20401381`,
+    linkText: '完整計畫內容及經費資訊',
+    linkUrl: 'https://sasw.mohw.gov.tw/app39/fundactivity/fundactivityDetails/20401381'
   },
   {
     id: 'news-2',
@@ -102,10 +102,10 @@ const INITIAL_NEWS: NewsItem[] = [
     category: '志工動態',
     date: '2026/10/10',
     isPinned: false,
-    summary: '感謝各界夥伴踴躍支持，本梯次活動支援志工與專長才藝志工招募已圓滿截止！完整計畫內容及經費核定資訊可至衛福部公益勸募管理系統查閱。',
-    content: `陪伴是孩子成長路上最珍貴的禮物！\n\n1. 【報名活動支援志工】：\n協助假日活動/課程之器材場地佈置、支援及攝影，陪伴並協助兒童一起進行活動。\n報名連結：https://neti.cc/MAJ7MA4\n\n2. 【專長才藝志工】：\n具備特殊才藝（如：手作、運動球類、音樂律動等），願意帶領社團並提供教學指導。\n報名連結：https://forms.gle/9QnqE3ojboNnGrVa7\n\n歡迎有愛心、耐心的您點選報名，讓愛在陪伴中綻放！\n\n完整計畫內容及經費資訊連結（公益勸募管理系統）：\nhttps://sasw.mohw.gov.tw/app39/fundactivity/fundactivityDetails/20401381`,
-    linkText: '完整計畫內容及經費資訊',
-    linkUrl: 'https://sasw.mohw.gov.tw/app39/fundactivity/fundactivityDetails/20401381'
+    summary: '感謝各界夥伴踴躍支持，本梯次活動支援志工與專長才藝志工招募已圓滿截止！感謝每一位熱情投入的志工夥伴。',
+    content: `陪伴是孩子成長路上最珍貴的禮物！\n\n1. 【報名活動支援志工】：\n協助假日活動/課程之器材場地佈置、支援及攝影，陪伴並協助兒童一起進行活動。\n報名連結：https://neti.cc/MAJ7MA4\n\n2. 【專長才藝志工】：\n具備特殊才藝（如：手作、運動球類、音樂律動等），願意帶領社團並提供教學指導。\n報名連結：https://forms.gle/9QnqE3ojboNnGrVa7\n\n歡迎有愛心、耐心的您點選報名，讓愛在陪伴中綻放！`,
+    linkText: '立即前往志工專區',
+    linkUrl: '#volunteer'
   },
   {
     id: 'news-3',
