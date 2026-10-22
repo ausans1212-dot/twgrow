@@ -98,14 +98,14 @@ const INITIAL_NEWS: NewsItem[] = [
   },
   {
     id: 'news-2',
-    title: '【志工熱情招募】歡迎加入活動支援志工與專長才藝志工團隊！',
+    title: '【本梯次招募已截止】活動支援暨專長才藝志工招募｜感謝大家的支持！',
     category: '志工動態',
     date: '2026/10/10',
     isPinned: false,
-    summary: '假日活動支援志工與專長才藝志工現正熱烈招募中，誠摯邀請具備熱忱或特殊才藝的夥伴，共同陪伴孩子快樂學習成長。',
-    content: `陪伴是孩子成長路上最珍貴的禮物！本會現正熱烈招募假日陪伴夥伴：\n\n1. 【報名活動支援志工】：\n協助假日活動/課程之器材場地佈置、支援及攝影，陪伴並協助兒童一起進行活動。\n報名連結：https://neti.cc/MAJ7MA4\n\n2. 【專長才藝志工】：\n具備特殊才藝（如：手作、運動球類、音樂律動等），願意帶領社團並提供教學指導。\n報名連結：https://forms.gle/9QnqE3ojboNnGrVa7\n\n歡迎有愛心、耐心的您點選報名，讓愛在陪伴中綻放！`,
-    linkText: '立即前往志工專區',
-    linkUrl: '#volunteer'
+    summary: '感謝各界夥伴踴躍支持，本梯次活動支援志工與專長才藝志工招募已圓滿截止！完整計畫內容及經費核定資訊可至衛福部公益勸募管理系統查閱。',
+    content: `陪伴是孩子成長路上最珍貴的禮物！\n\n1. 【報名活動支援志工】：\n協助假日活動/課程之器材場地佈置、支援及攝影，陪伴並協助兒童一起進行活動。\n報名連結：https://neti.cc/MAJ7MA4\n\n2. 【專長才藝志工】：\n具備特殊才藝（如：手作、運動球類、音樂律動等），願意帶領社團並提供教學指導。\n報名連結：https://forms.gle/9QnqE3ojboNnGrVa7\n\n歡迎有愛心、耐心的您點選報名，讓愛在陪伴中綻放！\n\n完整計畫內容及經費資訊連結（公益勸募管理系統）：\nhttps://sasw.mohw.gov.tw/app39/fundactivity/fundactivityDetails/20401381`,
+    linkText: '完整計畫內容及經費資訊',
+    linkUrl: 'https://sasw.mohw.gov.tw/app39/fundactivity/fundactivityDetails/20401381'
   },
   {
     id: 'news-3',
@@ -621,6 +621,8 @@ export default function News() {
                   {selectedNews.linkUrl && (
                     <a
                       href={selectedNews.linkUrl}
+                      target={selectedNews.linkUrl.startsWith('http') ? '_blank' : undefined}
+                      rel={selectedNews.linkUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
                       onClick={() => setSelectedNews(null)}
                       className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold transition-colors shadow-xs"
                     >
