@@ -9,6 +9,9 @@ import {
   Loader2,
   AlertCircle,
 } from 'lucide-react';
+import { TAIWAN_CITIES } from '../data/taiwanDistricts';
+
+const CITY_LIST = Object.keys(TAIWAN_CITIES);
 
 export default function StorePartnership() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -21,10 +24,24 @@ export default function StorePartnership() {
     contactPerson: '',
     phone: '',
     email: '',
-    storeAddress: '',
+    city: '高雄市',
+    district: '左營區',
+    streetAddress: '',
     boxQuantity: '1 個',
     notes: '',
   });
+
+  const availableDistricts = TAIWAN_CITIES[formData.city] || [];
+  const fullStoreAddress = `${formData.city}${formData.district}${formData.streetAddress}`;
+
+  const handleCityChange = (newCity: string) => {
+    const districtsForCity = TAIWAN_CITIES[newCity] || [];
+    setFormData((prev) => ({
+      ...prev,
+      city: newCity,
+      district: districtsForCity[0] || '',
+    }));
+  };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -42,7 +59,7 @@ export default function StorePartnership() {
 【聯絡人名】：${formData.contactPerson}
 【聯絡電話】：${formData.phone}
 【電子信箱】：${formData.email || '未提供'}
-【配送地址】：${formData.storeAddress}
+【店家地址】：${fullStoreAddress}
 【備註說明】：${formData.notes || '無'}
 ━━━━━━━━━━━━━━━━━━━━
 申請時間：${new Date().toLocaleString('zh-TW')}
@@ -66,7 +83,7 @@ export default function StorePartnership() {
           申請數量: formData.boxQuantity,
           聯絡人: formData.contactPerson,
           聯絡電話: formData.phone,
-          店家地址: formData.storeAddress,
+          店家地址: fullStoreAddress,
           電子信箱: formData.email || '未填寫',
           備註說明: formData.notes || '無',
           完整申請內容: emailBody,
@@ -99,7 +116,9 @@ export default function StorePartnership() {
       contactPerson: '',
       phone: '',
       email: '',
-      storeAddress: '',
+      city: '高雄市',
+      district: '左營區',
+      streetAddress: '',
       boxQuantity: '1 個',
       notes: '',
     });
@@ -325,14 +344,55 @@ export default function StorePartnership() {
                       <label className="block text-xs font-bold text-neutral-700 mb-1">
                         店家地址（募款箱擺放及配送地址） <span className="text-orange-500">*</span>
                       </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.storeAddress}
-                        onChange={(e) => setFormData({ ...formData, storeAddress: e.target.value })}
-                        placeholder="例：高雄市鳳山區光遠路..."
-                        className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
-                      />
+                      
+                      <div className="space-y-2">
+                        {/* City & District Select Row */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {/* City Select */}
+                          <div>
+                            <select
+                              value={formData.city}
+                              onChange={(e) => handleCityChange(e.target.value)}
+                              className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 bg-white font-medium text-neutral-800"
+                            >
+                              {CITY_LIST.map((city) => (
+                                <option key={city} value={city}>
+                                  {city}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+
+                          {/* District Select dropdown */}
+                          <div>
+                            <select
+                              value={formData.district}
+                              onChange={(e) => setFormData({ ...formData, district: e.target.value })}
+                              className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 bg-white font-medium text-neutral-800"
+                            >
+                              {availableDistricts.map((dist) => (
+                                <option key={dist} value={dist}>
+                                  {dist}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                        </div>
+
+                        {/* Detailed Street Address Input */}
+                        <input
+                          type="text"
+                          required
+                          value={formData.streetAddress}
+                          onChange={(e) => setFormData({ ...formData, streetAddress: e.target.value })}
+                          placeholder="請輸入詳細路街、巷弄、門牌號碼及樓層（例：光遠路 123 號 1 樓）"
+                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
+                        />
+                      </div>
+                      <div className="text-[11px] text-neutral-400 mt-1.5 space-y-0.5 leading-relaxed">
+                        <div>全台各縣市皆可申請認養，專員將為您安排專人送達或宅配寄送。</div>
+                        <div>完整地址預覽：<span className="font-medium text-neutral-700">{fullStoreAddress || '請選擇縣市與行政區...'}</span></div>
+                      </div>
                     </div>
 
                     <div>
