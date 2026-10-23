@@ -272,7 +272,7 @@ export default function News() {
         <div className="flex items-center justify-between text-xs text-neutral-500 mb-4 px-1">
           <span className="flex items-center gap-1.5 font-medium">
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-            <span>卡片頁面顯示 3 張，向右滑動可觀看更多公告</span>
+            <span>向右滑動可觀看更多公告</span>
           </span>
           <span className="font-mono text-neutral-400">
             共 {filteredNews.length} 則最新公告

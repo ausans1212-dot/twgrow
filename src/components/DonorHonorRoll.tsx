@@ -241,7 +241,7 @@ export default function DonorHonorRoll() {
                 選擇查閱年度與名單
               </h3>
               <p className="text-xs sm:text-sm text-neutral-500 mt-1">
-                以年度區分彙整，點選卡片即可展開收據名單；往右滑動可查閱其他年度，版面維持簡潔清爽。
+                以年度區分彙整，點選卡片即可展開名單。
               </p>
             </div>
 
@@ -403,15 +403,14 @@ export default function DonorHonorRoll() {
 
             </div>
 
-            {/* Slider Navigation Cue / Controls (Supports horizontal sliding for added years) */}
+            {/* Slider Navigation Cue / Controls */}
             <div className="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-500">
               <div className="flex items-center gap-2">
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-neutral-100 font-medium text-neutral-600">
-                  <ArrowRight className="w-3.5 h-3.5 text-neutral-400" />
-                  <span>支援向右滑動觀看更多年份卡片</span>
-                </span>
-                <span className="text-neutral-400">·</span>
-                <span>{isListExpanded ? `名單已展開：${currentViewTitle}` : '名單已收合（點擊卡片展開）'}</span>
+                {isListExpanded && (
+                  <span className="font-medium text-orange-600">
+                    名單已展開：{currentViewTitle}
+                  </span>
+                )}
               </div>
 
               <div className="flex items-center gap-2">
